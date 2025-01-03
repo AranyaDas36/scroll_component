@@ -33,7 +33,7 @@ export const ScrollImageTransition = () => {
     offset: ["start start", "end start"],
   });
 
-  const imageIndex = useTransform(scrollYProgress, [0, 1], [0, content.length - 1]);
+  const imageIndex = useTransform(scrollYProgress, [0, 1], [0, content.length ]);
 
   useEffect(() => {
     const unsubscribe = imageIndex.onChange((v) => setCurrentIndex(Math.round(v)));
